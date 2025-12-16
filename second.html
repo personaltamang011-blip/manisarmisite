@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Hero</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: palevioletred;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: black;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .nav-left {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .nav-center {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        /* HERO SECTION */
+        .hero-section {
+            min-height: calc(100vh - 70px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* HERO IMAGE */
+        .hero-section img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* HERO CONTENT */
+        .hero {
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* BUTTON AREA */
+        .hero-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .hero-buttons input {
+            padding: 10px;
+            width: 220px;
+        }
+
+        .hero-buttons button {
+            padding: 10px 20px;
+            background: skyblue;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hero-buttons a {
+            text-decoration: none;
+            color: black;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .nav-center {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-buttons input,
+            .hero-buttons button {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="nav-left">MY JS</div>
+
+        <div class="nav-center">
+            <div>Demo</div>
+            <div>About</div>
+        </div>
+
+        <div class="nav-right">
+            <input type="text" placeholder="Name">
+            <button>Sign In</button>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero-section">
+        <!-- If image doesn't load, text will still center -->
+        <img src="PC..png" alt="Hero Image">
+
+        <div class="hero">
+            <h2>SARMIMANI, THIS IS MY DEMO SITE.</h2>
+            <p>The Lord is my savior.</p>
+            <p>“You keep in perfect peace the one whose mind is stayed on you.” – Isaiah 26:3</p>
+
+            <div class="hero-buttons">
+                <input type="email" placeholder="Email Address">
+                <button>
+                    <a href="https://personaltamang011-blip.github.io/Responsive-form-demo/">FORM</a>
+                </button>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
